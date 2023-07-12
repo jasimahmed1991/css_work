@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* types solid, dashed,ridge,groove,inset, outset */
+/* border-radius bends the edges to some extent */
+
+h1 , img{
+    border: 8px solid rosybrown;
+    border-radius: 15px;
+}
+
+/* note: h1 will take the full width and borders will come at end while in image it wont take full width */
+div{
+    border-top: 8px solid green;
+    
+}
+
+li {
+    border-bottom: 2px solid pink;
+    
+}

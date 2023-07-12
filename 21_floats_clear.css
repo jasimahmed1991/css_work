@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+/* revision: block level elemnts are stacked from top to bottom, inline are stacked from left to right   */
+/* float havee 3 values right, left , none */
+/* once we use float that element comes out of document, we can  fix this later */
+/* The solution is use an empty div with a class clear fix and use clear property of clear:both */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.fav-musician {
+    border: 10px solid green;
+}
+
+.mozart {
+    width: 25%;
+    float: left;
+    background-color: rgb(250, 221, 210);
+}
+
+.beethoven {
+    width: 25%;
+    float: left;
+    background-color: rgb(210, 212, 250);
+}
+
+.bach {
+    width: 25%;
+    float: left;
+    background-color: rgb(210, 250, 229);
+}
+
+.paganini {
+    width: 25%;
+    float: left;
+    background-color: rgb(93, 93, 13);
+}
+
+/* this is the trick using float left for all four div and given width of 25% */
+/* as soon as we use float it comes out of the doc flow */
+
+/* .clearfix {
+    clear: both;
+} */
+
+/* by using clear both the document will get back on track */
+
+/* by using clear left we can assume anything floating in the left will be cleared ,Just use clear:both */
+
+/* Clear: both is good but there is an other way too, you can use pseudo classes to implement this */
+
+/* selct the parent element of which we have used float for */
+.fav-musician::after {
+    content: "";
+    display: block;
+    clear: both;
+}

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* static
+    relative
+    absolute
+    absolute + relative + transform translate(to center things)
+    fixed
+    stickey
+    z-index */
+
+.container {
+    width: 800px;
+    height: 600px;
+    border: 8px solid green;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.container h1 {
+    border: 4px solid red;
+    background: lightcoral;
+    /* position: relative; */
+    /* top: 50px; */
+    /* top: 110px;
+    z-index: -1; */
+    /* absolute */
+    /* position: absolute;
+    right: 0px; */
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    transform: translate(-50%, -50%);
+    /* transfor tanslate is used to make it to the center */
+
+}
+
+/* as soon as you use position as relative you will have 4 values to use top,left,right,bottom */
+/* you can take that element any where by using position relative */
+/* so what happens is it will cover the element by taking its place, you could place it under it bu using z-index */
+/* By using -1 it will go under the element and not be visible */
+
+.container h3 {
+    background: black;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    /* incase if you find the element hidden increase the value of z-index */
+    z-index: 10;
+}
+
+
+.container h4 {
+    background-color: blue;
+    position: sticky;
+    top: 0px;
+
+}
+
+/* position stickey will stick to it's element , while scrollong down till the parent elemnt is visble it will show */
+/* try to keep stickey note outside of all element, individual so that it will be availabele through out the page */
+
+/* position fixed as name says the element will be fixed , here also it will come out of doc flow */
+
+.container p {
+    border: 4px solid purple;
+    background: lightgray;
+}
+
+/* by default the positions of element will be static */
+/* in relative the element moves from its original position */
+/* in absolurte it will move out from document flow and takes any given position */
+/* the moment you give position absolute it will pop out and be out of document flow */
+
+/* If you wany any items inside container to move to specific position just give conatiner as relative and the item which you are moving as absolute */
+/* so the element will move within that  conatiner not outside that */
+
+/* Transform tranlate is used because when you move an element 50% from top and 50% from left it will allign to center but it will fix the 1st letter to center , to fix this use transform translate to same element */

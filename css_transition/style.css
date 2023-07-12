@@ -1,0 +1,16 @@
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: lightcoral;
+    transition-property: all;
+    transition-duration: 500ms;
+    transition-timing-function: ease-out;
+    /* transition: all 500ms ease-in-out; */
+
+}
+
+.box:hover {
+    background-color: brown;
+    width: 120px;
+    height: 120px;
+}

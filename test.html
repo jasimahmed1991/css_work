@@ -1,0 +1,239 @@
+<div class="fullform">
+    <div class="container">
+        <!--        <div class="title">Registration form</div> -->
+        <div class="subtitle">Programs</div>
+        <form enctype="multipart/form-data" method="post" name="form" id="contact-form"
+            onSubmit="return CheckRegister();">
+            <div class="d-flex wrap">
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span>Institution</span></div>
+                <div class="right vc_col-xs-12 vc_col-sm-6">
+                    <select name="instid" id="instid" class="text">
+                        <option value="">Select Institute</option>
+                        <option value="898">Surana Degree College,Peenya</option>
+                    </select>
+                </div>
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span>Course</span></div>
+                <div class="right vc_col-xs-12 vc_col-sm-6">
+                    <div class="degree1" id="degree1" style="display: none;">
+                        <input type="hidden" name="type" value="degree" id="type1" />
+                        <select name="degree_group" id="degree_group" class="text" onchange="myFunction()">
+                            <option value="">--Select--</option>
+                            <option value="BCom">B.Com</option>
+                            <option value="BCOMACCA">B.Com – (ACCA – UK)</option>
+                            <option value="BCOMCMA">B.Com – (CMA -US)</option>
+                            <option value="BA">BA</option>
+                            <option value="BSC">BSc</option>
+                            <option value="BBA">BBA</option>
+                            <option value="BBACMA">BBA - (CMA -US)</option>
+                            <option value="BBAACC">BBA - Aviation Certification Course</option>
+                            <option value="BCA">BCA</option>
+                            <option value="CCN">BCA - Cloud Computing & Networking</option>
+                            <option value="DS">BCA - Data Science </option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span class="subtitle">Particulars</span> </div>
+                <div class="right vc_col-xs-12 vc_col-sm-6"><span class="subtitle">details</span> </div>
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span>Name of Applicant *</span> </div>
+                <div class="right vc_col-xs-12 vc_col-sm-6"><span>
+                        <input name="name" type="text" class="text" id="name" placeholder="Name" />
+                    </span> </div>
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span>Date of Birth *</span> </div>
+                <div class="right vc_col-xs-12 vc_col-sm-6"><span>
+                        <input name="dob" type="text" class="text" id="dob" placeholder="Dob" />
+                    </span> </div>
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span>Father's Name *</span> </div>
+                <div class="right vc_col-xs-12 vc_col-sm-6"><span>
+                        <input name="fathersname" type="text" id="fathersname" class="text"
+                            placeholder="Fathers Name" />
+                    </span> </div>
+                <div class="left vc_col-xs-12 vc_col-sm-6"><span>Previous School *</span> </div>
+                <div class="right vc_col-xs-12 vc_col-sm-6"><span>
+                        <input name="previous_school" id="previous_school" type="text" class="text"
+                            placeholder="Previous School" />
+                    </span> </div>
+                <div class="left vc_col-xs-12"><span class="span">Contact Details</span></div>
+                <div class="right d-flex wrap vc_col-xs-12">
+                    <div class="left vc_col-xs-12 vc_col-sm-6"><span>Mobile No * :</span></div>
+                    <div class="right vc_col-xs-12 vc_col-sm-6">
+                        <input name="mobile" id="mobile" type="text" class="text" placeholder="Mobile" />
+                    </div>
+                    <div class="left vc_col-xs-12 vc_col-sm-6"><span>OTP * :</span></div>
+                    <div class="right vc_col-xs-12 vc_col-sm-6">
+                        <div class="vc_row d-flex wrap col-xs-12">
+                            <div class="vc_col-xs-8">
+                                <input name="otp" id="otp" type="text" class="text" placeholder="OTP" />
+                            </div>
+                            <div class="vc_col-xs-4">
+                                <input type="button" id="send_otp" class="btn" value="Send OTP" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left vc_col-xs-12 vc_col-sm-6"><span>Email-Id *</span></div>
+                    <div class="right vc_col-xs-12 vc_col-sm-6">
+                        <input name="email" id="email" type="text" class="text" placeholder="Email" />
+                    </div>
+                </div>
+            </div>
+            <div class="declaration-head">Declaration</div>
+            <div class="declaration">
+                <input checked="checked" name="terms" type="checkbox" value="terms" class="check" />
+                Here by declare that the details furnished are true to the best of my knowledge and belief, In case I am
+                admitted, I shall abide by all the rules and regulations of the college. I shall attend the classes
+                regularly and also follow the prescribed dress code. I shall conduct myself with dignity and discipline
+            </div>
+            <div class="submit">
+                <input name="Submit" type="submit" value="Submit" class="but" id="submit" />
+            </div>
+        </form>
+    </div>
+</div>
+<div class="wpb_raw_code wpb_content_element wpb_raw_html">
+    <div class="wpb_wrapper">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            (function ($) {
+                $(function () {
+                    $("#dob").datepicker(
+                        {
+                            dateFormat: 'dd/mm/yy',
+                            maxDate: 0,
+                            changeYear: true,
+                            yearRange: "-100:+0",
+                        });
+                });
+
+
+                $(document).ready(function () {
+                    $('#instid').on('change', function () {
+                        if (this.value == '898') {
+                            $("#degree1").show();
+
+                        } else {
+
+                            $("#degree1").hide();
+
+                        }
+                    });
+                });
+
+                // When the document is ready
+                $(document).ready(function () {
+                    $('#send_otp').click(function () {
+                        var instid = $('#instid').val();
+                        var mobile = $('#mobile').val();
+
+                        if (mobile != '' && mobile.length == '10') {
+                            $.ajax({
+                                url: "https://www.optra-india.com/preadmission/preadmission_otp.php",
+                                type: "POST",
+                                data: { instid: instid, mobile: mobile },
+                                async: false,
+                                success: function (result) {
+                                    if (result == 'Success') {
+                                        alert("OTP has been sent successfully to your mobile number");
+                                    } else {
+                                        alert(result);
+                                    }
+                                },
+                                error: function (e) {
+                                    alert(e);
+                                }
+                            });
+                        }
+                    });
+
+                    $('#submit').click(function (e) {
+                        e.preventDefault();
+                        var instid = $('#instid').val();
+
+                        var type1 = $('#type1').val();
+
+                        var degree_group = $('#degree_group').val();
+
+                        var name = $('#name').val();
+                        var dob = $('#dob').val();
+                        var fathersname = $('#fathersname').val();
+                        var previous_school = $('#previous_school').val();
+                        var phone = $('#mobile').val();
+                        var otp = $('#otp').val();
+                        var email = $('#email').val();
+                        /*--------------------------------------*/
+                        if (instid == '898') {
+                            $.ajax({
+                                url: "https://www.optra-india.com/preadmission/preadmission_insert.php",
+                                type: "POST",
+                                data: { instid: instid, phone: phone, name: name, fathersname: fathersname, dob: dob, otp: otp, type: type1, degree_group: degree_group, email: email, previous_school: previous_school },
+                                async: false,
+                                success: function (result) {
+                                    if (result == 'Success') {
+                                        alert("Registration is successful. Pls check your SMS for completing application online.Thank you");
+                                        window.location.href = 'https://www.optra-india.com/preadm_app/';
+                                    } else {
+                                        alert(result);
+                                    }
+                                },
+                                error: function (e) {
+                                    alert("Error");
+                                }
+                            });
+                        }
+
+                        /*--------------------------------------*/
+                    });
+                })
+            })(jQuery)
+        </script>
+        <script language="javascript">
+
+            function CheckRegister() {
+                if (document.form.instid.value == "") {
+                    alert("Enter Institution ,Please");
+                    document.form.instid.focus();
+                    return false;
+                }
+                if (document.form.name.value == "") {
+                    alert("Enter Name ,Please");
+                    document.form.name.focus();
+                    return false;
+                }
+                if (document.form.dob.value == "") {
+                    alert("Enter Date Of Birth ,Please");
+                    document.form.dob.focus();
+                    return false;
+                }
+                if (document.form.fathersname.value == "") {
+                    alert("Enter Father Name ,Please");
+                    document.form.fathersname.focus();
+                    return false;
+                }
+                if (document.form.previous_school.value == "") {
+                    alert("Enter Previous School ,Please");
+                    document.form.previous_school.focus();
+                    return false;
+                }
+
+                if (document.form.mobile.value == "") {
+                    alert("Enter Mobile Number ,Please");
+                    document.form.mobile.focus();
+                    return false;
+                }
+                if (document.form.otp.value == "") {
+                    alert("Enter OTP ,Please");
+                    document.form.otp.focus();
+                    return false;
+                }
+                if (document.form.email.value == "") {
+                    alert("Enter Email Id ,Please");
+                    document.form.email.focus();
+                    return false;
+                }
+
+                return true;
+            }
+        </script>

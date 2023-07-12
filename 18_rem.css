@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    /* this will be the root element for font size */
+    /* if you want to make any changes , you can do it here and it applies to whole page */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* rem unit works on the basis on root element(means HTML element) which is defined at the top */
+
+.box-1 {
+    font-size: 2rem;
+    border: 1rem solid red;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}

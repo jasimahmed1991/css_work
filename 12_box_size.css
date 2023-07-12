@@ -1,0 +1,37 @@
+/* 1. just imagine you are drawing a hr line of 500px
+    2.second you have a div of 500px and paddind of 10px, border 10 px, margin 10px, so now he width will not be 500 it will add up all padding border and margin
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr{
+    width: 700px;
+    margin-left: 0px
+}
+
+.box{
+    width: 700px;
+    background-color: gray;
+    border: 10px solid red;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* if you want an condition where if you give a width of 500px and you do not want that to change at any cost you should use */
+/* just by giving the property as border-box, you can fix the width  */
+/* you can see the box1 width is 700px only , the padding and border all fits inside the width */
+/* By default it will be content-box */
+.box1{
+    box-sizing: border-box;
+    width: 700px;
+    background: cadetblue;
+    border: 10px solid red;
+    padding: 10px;
+}
+
+

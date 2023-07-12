@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2{
+    border: 2px solid red;
+    display: inline;
+}
+
+/* block level elements starts from left ,and you set height and width on them */
+
+
+/* a{
+    border: 2px solid red;
+    margin-left: 100px; 
+    display: blocks
+    ;
+} */
+/* inline elements take width only which is required for them not more then that*/
+/* you cannot change the widht and height of inline elements */
+/* margin top and bottomm wont work in inline, only left and right will work */
+/* padding will work fine for left,right but it will messup for top and bottom */
+/* if you want to change display property of block use display:inline */
+/* you can change inline to blocck as well. display:block */
+/* once you convert the elements you can apply all the properties */
+/* image is also an inline element , but for image you can apply height and width, unlike other inline elements */
+
+img{
+    width: 300px;
+    border: 2px solid red;
+    padding: 5px;
+}
+/* hieght of an image is automatically calculated by browser only if you give width */
+/* width of an image is automatically calculated by browser only if you give height */
+
+
+/* inline block proprty : you can apply block elemnts property to inline elemnts by just using inline-block */
+div a{
+    border: 2px solid red;
+    display: inline-block;
+    margin: 50px;
+    padding: 50px;
+}

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* pseudo classes are used to define special state of an elememt,Mostly used in links */
+/* basicllly 4 states
+1.link
+2.visited 
+3.hover
+4.active
+
+Remember one thing while using in projects use these in the above order itself
+*/
+
+a:link {
+    color: red;
+}
+
+a:hover {
+    color: green;
+}
+
+a:visited {
+    color: aqua;
+}
+
+a:active {
+    color: violet;
+}
+
+p:hover {
+    color: red;
+}
+
+p:active {
+    background: green;
+    /* active state is when you press and click that part */
+}
+
+
+
+/* these are related to input type  */
+input[type="text"]:focus {
+    padding: 20px;
+    outline: dotted;
+    border: 2px solid green;
+}
+
+
+/* this would be very helpfull in alerts related to validation */
+
+input:required {
+    color: red;
+}
+
+/* pseudo classes related to first child and first of type */
+p:first-child {
+    color: red;
+}
+
+/* first child means it should be the first child itself , suppose if you have h1 tags before it then it will not be first child it will be second child */
+
+p:first-of-type {
+    color: red;
+    /* first-of type means no matter if there are other elements the very first p will become green */
+}
+
+
+
+/* last child and last of type */
+
+/* h2:last-child {
+    color: aqua;
+} */
+
+h2:last-of-type {
+    color: aqua;
+    /* sellect all h2 that are last with repect to the parents */
+}

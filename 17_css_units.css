@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* absolute means which remains same eg: pixels,inch,pts */
+/* relative keeps on changing eg: em,rem  */
+
+/* by default font size will be 16px for p */
+/* 1 inch = 96px font-size: 1in; */
+
+
+/* relative units */
+
+div {
+    border: 2px solid red;
+    font-size: 20px;
+}
+
+p {
+    border: 1px solid green;
+    width: 50%;
+    background-color: aqua;
+    font-size: 100%;
+    /* margin: auto; */
+    margin-left: 25%;
+}
+
+/* percentages always works with respect to parent , so here parent has 16px,if we want to double we can give 200% */
+/* Percentages are mostly used for widths and margin  */

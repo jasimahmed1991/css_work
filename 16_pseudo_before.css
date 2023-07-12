@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.cool::before {
+    content: 'hello';
+    display: block;
+    color: green;
+    border: 1px solid red;
+}
+
+/* what this does is before the class cool and element will be added and it's content will be hello  and it will be an inline element , we can convert it to block */
+
+.cool::after {
+    content: 'hello';
+    display: block;
+    color: green;
+    border: 1px solid red;
+}
+
+
+.main-heading::before {
+    content: 'hello this is content added bt pseudo class before ';
+    color: red;
+}
+
+.main-heading::after {
+    content: 'hello this is content added bt pseudo class before ';
+    color: red;
+}
+
+/* pseudo contents before and after cannot be used with images,br,input */
+/* for more: https://developer.mozilla.org/en-US/docs/Web/CSS/::before */

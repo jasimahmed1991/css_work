@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* viewport height and width, the area in any screen which can be seen is considered as viewport height and width, This may change in different screen sizes */
+/* view port height and width does not care about parent unlike % */
+
+/* h1 {
+    border: 2px solid rebeccapurple;
+    width: 50vw;
+} */
+
+/* .box {
+    height: 100vh;
+    background-color: aqua
+} */
+
+
+.box {
+    height: 100vmin;
+    background: aqua;
+}

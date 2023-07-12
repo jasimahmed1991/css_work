@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/*inline style attribute > id selector > class selector > element selector*/
+
+
+/* specificity is value to which an importance is given by element */
+h1{
+    color: green;
+}
+
+.h1class{
+    color: red;
+}
+
+/* you could see preference is given to .h1class */
+/* // classes are more specific than elements, preference is given to classes more than element */
+
+
+#h1id{
+    color: blue !important;
+}
+/* you could see preference is given to id than class and element */
+/* // id's are more specific than classes and elements, preference is given to id's more than element and classes */
+/* if we want we can write !important to give more preference  */
+
+
+
+/* how to calculate specificity */
+div#container .my-songs li{
+    color: brown;
+    background-color: yellow;
+}
+
+/*inline style attribute > id selector > class selector > element selector*/
+/* follow this above line to calculate specificity */
+
+/* inline,id,class,element */
+/* 0,1,1,1 = 0113; */
+
+
+div#container ul.my-songs li.favourite{
+    color: yellow;
+    background: brown;
+}
+/* inline,id,class,element */
+/* 0,1,2,3 */

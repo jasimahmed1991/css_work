@@ -1,0 +1,119 @@
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-name: change-bg-color;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+}
+
+.box-2 {
+    height: 15px;
+    width: 5px;
+    background-color: palevioletred;
+    animation-name: grow-width;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes change-bg-color {
+    from {
+        background: lightcoral;
+    }
+
+    to {
+        background-color: rebeccapurple;
+    }
+}
+
+
+@keyframes grow-width {
+    from {
+        width: 0px;
+    }
+
+    to {
+        width: 300px;
+    }
+}
+
+
+/* ########## for border ########## */
+.border {
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    animation-name: change-border;
+    animation-duration: 5s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    border: 2px solid red;
+}
+
+@keyframes change-border {
+    from {
+        border-radius: 80%;
+        background-color: red;
+        border: 2px solid red;
+    }
+
+    to {
+        border-radius: 50%;
+        background-color: gray;
+        border: 6px solid green;
+    }
+}
+
+/* ########## for border ########## */
+
+
+
+/* ############ for round ball ############ */
+.round-ball {
+    height: 50px;
+    width: 50px;
+    background: lawngreen;
+    border-radius: 50%;
+    animation-name: move-around;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+
+@keyframes move-around {
+    25% {
+        background-color: green;
+        top: 0;
+        left: 50px;
+
+    }
+
+    50% {
+        background-color: yellow;
+        top: 50px;
+        left: 50px;
+    }
+
+    75% {
+        background-color: aqua;
+        top: 50px;
+        left: 0px;
+    }
+
+    100% {
+        background-color: saddlebrown;
+        top: 0;
+        left: 0;
+    }
+}
+
+/* ############ for round ball ############ */

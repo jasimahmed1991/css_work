@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+    font-size: 1.5rem;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.box {
+    border: 2px solid red;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+}
+
+.box img {
+    display: block;
+    width: 100%;
+
+}
+
+.btn {
+    background: linear-gradient(to bottom, #4c6aaf, #332e8b);
+    /* Set a gradient background */
+    border: none;
+    /* Remove the border of the button */
+    color: white;
+    /* Set the text color of the button */
+    padding: 10px 20px;
+    /* Set the padding of the button */
+    text-align: center;
+    /* Center the text of the button */
+    text-decoration: none;
+    /* Remove the underline of the button text */
+    display: inline-block;
+    /* Set the button display to inline-block */
+    font-size: 16px;
+    /* Set the font size of the button text */
+    cursor: pointer;
+    /* Set the cursor style to pointer */
+    border-radius: 5px;
+    /* Set the border radius of the button */
+    transition: all 0.4s ease-in;
+}
+
+.btn:hover {
+    background: aqua;
+}
+
+.box-content {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    opacity: 0;
+    z-index: 2;
+    transition: all 0.4s ease-in-out;
+}
+
+.box:hover .box-content {
+    opacity: 1;
+    left: 50%;
+}
+
+
+/* this is the trick to overlays */
+.box::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.623);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 1;
+}
+
+.box:hover::after {
+    opacity: 1;
+}

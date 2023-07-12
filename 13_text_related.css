@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    background-color: lightblue;
+    padding-right: 10px;
+    font-size: 30px;
+}
+
+/* just remember block line elements takes the complete width,  */
+/* Not the case with inline elements , it does not take the full width  */
+
+a {
+    background-color: lightcoral;
+    display: inline-block;
+    width: 500px;
+    text-align: center;
+    /* can also use right, left as wll */
+
+}
+
+
+/* this is related to font weight */
+/* By default font-weight og p will be normal which is 400*/
+/* By default font-weight of H tags will be bold which is 700*/
+
+
+
+/* This is related to font-sizing */
+/* By default font-size will be of 16px */
+p {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    /* if you want to increase space btww line use line height */
+    word-spacing: 5px;
+    /* if you want space btw 2 words use word-spacing */
+    letter-spacing: 2px;
+}
+
+/* text-decoration property : text-decoration: underline */
+/* text-decoration property : text-decoration: underline dotted red  */
+/* text-decoration property : text-decoration: underline wavy red  */
+h4 {
+    text-decoration: underline solid red;
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* what are attributes: for eg inside a tag the href is attribue, inside input tags name,id all these are attributes */
+input[type = "text"]{
+    color :red;
+    background-color: rgb(75, 75, 129);
+}
+
+/* for password */
+input[type = "password"]{
+    color: rgb(228, 10, 10);
+    background-color: black;
+}
+
+/* changing the values of the link  */
+/* another way a[href= *= "google"]{color : red} */
+a[href = "https://www.google.com/"]{
+    color: rgb(226, 43, 195);
+}
+
+
+/* if we want all the links which starts with https to be altered here is the way */
+a[href ^= "https"]{
+    color: brown;
+}
+
+
+/* if we want to change the color of those links which are ending with .com */
+a[href $= ".com"]{
+    color: pink;
+}
+
+

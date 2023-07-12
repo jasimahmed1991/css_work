@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* how em works is , suppose if i give 2em in div element for font size, it will always look for parent element of that element ,so by default font size will be 16px.so 2em will be 32 px */
+
+.box1 {
+    font-size: 20px;
+
+}
+
+h1 {
+    font-size: 2em;
+    /* this will look into it's parent font size and calculate accordingly */
+    /* so on this case parent font-size is 16 so h1 will be 32 px */
+    border: 2em solid red;
+    /* here 2em means it will check the font-size of the current element, then it will calculate accordingly so 2em means 2 * (font-size:20px) = 80px */
+}
+
+/* font size will be calculated with respect to its parent element */
+/* conclusion: othen than font size if you use em in it will first check font-size of that element , next it will calculate accordingly to that */
+
+/* em vs rem vs px
+
+font-size : always use rem (root element- it will be helpfull in responsive )
+padding: try to use em, it will help in responsive parts 
+*/

@@ -1,0 +1,22 @@
+/* utilty classes will only do ine task at a time , do not assign any other task */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+/* how to change text of whole body */
+body{
+    font-family: 'Poppins', sans-serif; /*this means of arial is not there it will look for helvtiva, if not for san -sarif */
+    font-weight: 500; 
+}
+
+.text-red{
+    color: red;
+}
+
+.text-green{
+    color: green;
+}
+
+.bg-dark{
+    background: #555;
+}

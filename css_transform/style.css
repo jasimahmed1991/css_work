@@ -1,0 +1,17 @@
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: lightgreen;
+    font-size: 1.5rem;
+    margin: 100px auto;
+    transition: transform 1s ease-in-out;
+    transform-origin: top left;
+}
+
+.box:hover {
+    transform: rotate(360deg);
+    /* transform: scale(1.1);  */
+    /* transform: translate(50px); */
+    /* transform: skew(30deg); */
+
+}

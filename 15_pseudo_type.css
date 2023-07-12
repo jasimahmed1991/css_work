@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* p:nth-child(2) {
+    color: red;
+} */
+
+/* 2nd clild of parent will be red */
+
+
+
+/* p:nth-child(2n) {
+    color: aqua;
+} */
+
+/* this means every second child will be aqua */
+
+
+
+/* p:nth-of-type(2) {
+    color: red;
+} */
+
+
+ul li:nth-of-type(2n) {
+    color: red;
+    background: lightblue;
+}
+
+ul li:nth-of-type(2n+1) {
+    color: green;
+    background: lightcoral;
+}
+
+/* there are some more pseudo classes */
+/* body :not(p) {
+    color: blue;
+} */
+
+/* this means all those elemnts which are not blue */
+
+
+
+/* div:empty {
+    background: blue;
+} */
+
+/* you can use these for empty divs */
